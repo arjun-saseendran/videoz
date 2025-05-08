@@ -18,5 +18,5 @@ export const VideoContainer = () => {
   useEffect(() => {
     fetchVideos();
   }, []);
-  return <div className="flex flex-wrap">{videos.map(video => (<Link to={`/watch?v=${video.id}`}><VideoCard key={video?.id} info={video} /></Link>)) }</div>;
+  return <div className="flex flex-wrap">{videos.map(video => (<Link key={video.id} to={`/watch?v=${video.id}`}><VideoCard  info={video} /></Link>)) }</div>;
 };
