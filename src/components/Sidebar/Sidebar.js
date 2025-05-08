@@ -1,4 +1,8 @@
+import { useSelector } from "react-redux";
+
 export const Sidebar = () => {
+  const { isMenuOpen } = useSelector((state) => state.app);
+  if (!isMenuOpen) return null;
   return (
     <div className="p-5 shadow-xl w-48">
       <ul>
@@ -22,5 +26,5 @@ export const Sidebar = () => {
         <li>Movies</li>
       </ul>
     </div>
-  )
-}
+  );
+};
